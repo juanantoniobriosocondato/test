@@ -1,9 +1,14 @@
-﻿namespace test_API.Modelos
-{
-    public class Productos
-    {
-        public int Id { get; set; } 
+﻿using System.ComponentModel.DataAnnotations;
 
-        public string Nombre { get; set; }    
+namespace test_API.Modelos
+{
+    public class Producto
+    {
+        public int Id { get; set; }
+
+        [Required]
+        [MaxLength(30)]
+        public string Nombre { get; set; } 
+        public DateTime FechaCreacion { get; set; }
     }
 }
