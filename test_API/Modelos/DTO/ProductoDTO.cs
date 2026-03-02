@@ -1,10 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace test_API.Modelos.DTO
 {
     public class ProductoDTO
     {
-        public int Id { get; set; }
+        [BsonId]
+        public int Id { get; set; } 
 
         [Required]
         [MaxLength(30)]

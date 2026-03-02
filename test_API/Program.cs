@@ -8,6 +8,7 @@ builder.Services.AddSwaggerGen(); // Esto genera la documentación
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddSingleton<test_API.Services.ProductoService>();
 
 var app = builder.Build();
 
